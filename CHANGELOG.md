@@ -6,5 +6,5 @@ All notable changes to this project will be documented in this file.
 - Add default `massdrop/alt` configuration
 
 ### Changed
-- Swap `Alt` and `GUI` keys (#1)
+- Swap left `Alt` and left `GUI` keys. Right `Alt` remains unchanged. (#1, #6)
 - Swap `Esc` and Backtick (`` ` ``) (#3)
