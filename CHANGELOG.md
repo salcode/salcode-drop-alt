@@ -7,3 +7,4 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 - Swap `Alt` and `GUI` keys (#1)
+- Swap `Esc` and Backtick (`` ` ``) (#3)
