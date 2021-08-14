@@ -14,6 +14,23 @@ enum tapdance_keycodes {
     TD_BACKTICK_ESC,       //Tap Dance Backtick / Esc
 };
 
+/**
+ * When the key was tapped exactly 2 times, KC_ESC
+ * otherwise, KC_GRV the appropriate number of times.
+ */
+void td_backtick_exactly_2_esc(qk_tap_dance_state_t *state, void *user_data) {
+    int i;
+
+    if (state->count == 2) {
+        tap_code(KC_ESC);
+        return;
+    }
+
+    for (i=0; i<state->count; i++) {
+        tap_code(KC_GRV);
+    }
+}
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_65_ansi_blocker(
         KC_GRV,                                                                                                                                \
