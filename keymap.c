@@ -31,6 +31,11 @@ void td_backtick_exactly_2_esc(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Tap Dance definitions
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [TD_BACKTICK_ESC] = ACTION_TAP_DANCE_FN(td_backtick_exactly_2_esc),
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_65_ansi_blocker(
         KC_GRV,                                                                                                                                \
