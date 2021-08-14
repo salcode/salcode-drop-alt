@@ -10,6 +10,10 @@ enum alt_keycodes {
     MD_BOOT,               //Restart into bootloader after hold timeout
 };
 
+enum tapdance_keycodes {
+    TD_BACKTICK_ESC,       //Tap Dance Backtick / Esc
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_65_ansi_blocker(
         KC_GRV,                                                                                                                                \
