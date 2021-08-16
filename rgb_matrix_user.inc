@@ -11,3 +11,4 @@ static bool salcode_proof_of_concept(effect_params_t* params) {
         rgb_matrix_set_color_all(38,104,178);
     }
 }
+#endif // RGB_MATRIX_CUSTOM_EFFECT_IMPLS
