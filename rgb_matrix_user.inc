@@ -20,14 +20,7 @@ static bool salcode_proof_of_concept(effect_params_t* params) {
     }
 
     for (uint8_t i = led_min; i < led_max; i++) {
-        RGB_MATRIX_TEST_LED_FLAGS();
-
-        // Dim background by 50% to make WASD keys stand out more
-        if (HAS_ANY_FLAGS(g_led_config.flags[i], LED_FLAG_KEYS)) {
-            bg_hsv.v = rgb_matrix_config.hsv.v / 2;
-        } else {
-            bg_hsv.v = rgb_matrix_config.hsv.v;
-        }
+        bg_hsv.v = rgb_matrix_config.hsv.v;
 
         RGB bg_rgb = hsv_to_rgb(bg_hsv);
         rgb_matrix_set_color(i, bg_rgb.r, bg_rgb.g, bg_rgb.b);
