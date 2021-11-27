@@ -17,6 +17,9 @@ static bool sal(effect_params_t* params) {
         if (i == 32 || i == 31 || i == 39) {
             // Red.
             rgb_matrix_set_color(i, 255, 0, 0);
+        // Indices: 14, 29, 43, 57 = Del, Home, PgUp, PgDn on Drop ALT
+        } else if (i == 14 || i == 29 || i == 43 || i == 57) {
+            // Off.
         } else {
             // Blue.
             rgb_matrix_set_color(i, 38, 104, 178);
